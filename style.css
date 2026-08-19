@@ -1,5 +1,28 @@
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.up{
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  background: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.up:active{
+  opacity: 0.4;
+}
+
+.up.active{
+  visibility: visible;
 }
 
 html{
@@ -731,8 +754,8 @@ button {
 /*Offer*/
 
 .offer-section {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-content: center;
   align-items: flex-start;
   gap: 15px;
@@ -741,11 +764,6 @@ button {
   max-width: 1400px;
   margin: 0 auto;
   padding-top: 30px;
-}
-
-
-.offer-section-one {
-  flex: 1 1 40%;
 }
 
 
@@ -797,6 +815,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-top: 20px;
 }
 
 .offer-section p {
@@ -818,10 +837,6 @@ button {
 
 
 @media (max-width: 900px) {
-  .offer-section {
-    flex-direction: column;
-    padding: 20px;
-  }
 
   .offer-section > div {
     width: 100%;
@@ -982,10 +997,10 @@ button {
 }
 
 .luxury-card-container{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-top: 2em;
-
+  gap: 30px;
 }
 
 .luxury-card-container img{
@@ -1023,6 +1038,7 @@ button {
     width: 100%;
     margin: 3em auto;
     padding: 0 20px;
+    color: #111;
 }
 
 .faq-section h2 {

@@ -2,13 +2,21 @@ const menuToggle = document.getElementById("menu-toggle");
 const closeBtn = document.getElementById("close-btn");
 const mobileNav = document.getElementById("mobile-nav");
 const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
+const up = document.querySelector(".up");
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("scroll", () => {
-  if(window.scrollY > 15){
+   up.classList.toggle("active", window.scrollY > 600)
+})
 
-  }
+up.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior:"smooth"
+        
+    })
 })
 
 function openMenu() {
@@ -238,6 +246,8 @@ provisionTimeline
         stagger: 0.12,
         ease: "power3.out"
     }, "-=0.3");
+
+
 
 
 
