@@ -7,48 +7,151 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="section-one">
-        <header class="header-bar">
-            <div class="left-header" aria-hidden="false">
-                <img src="images/munachi-logo.png" alt="logo">
-            </div>
+    
+<section class="hero">
+    <img
+        src="images/darkroom.jpg"
+        alt=""
+        class="hero-bg"
+        aria-hidden="true"
+    >
 
-            <nav class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Main navigation">
-                <ul>
-                    <button class="close-btn" id="close-btn">&times;</button>
-                    <li><a href="#" >Home</a></li>
-                    <li><a href="#" >About</a></li>
-                    <li><a href="#" >Contact</a></li>
-                </ul>
-            </nav>
+    <div class="hero-overlay"></div>
 
-            <div class="right-header">
-                <a class="cta" href="#" role="button" aria-label="Book a free call">Book a Free Call</a>
-            </div> 
-            <button class="menu-toggle" id="menu-toggle">☰</button>
-        </header>
+    <header class="header">
 
-        <div class="bdy">
-            <div class="lower">
-                <h1>Spaces that speak Volumes <br>Without Saying a Word</h1>
-                <p>We create elegant, functional, and personalized spaces that reflect your lifestyle. 
-                    <br>From concept to completion, we transform ordinary rooms into inspiring environments you will love to live and work in.</p>
-                <div class="lower-btn">
-                    <a class="call-to-action" href="#" role="button" aria-label="Book a free call">Book a Free Call</a>
-                    <a class="explore" href="#" role="button" aria-label="Book a free call">Explore More</a>
-                </div>
-            </div>
+        <a href="#" class="logo" aria-label="Munachi Interiors home">
+            <img src="images/munachi-logo.png" alt="Munachi Interiors">
+        </a>
 
-            <div class="one-card">
-                <img src="images/kitch.jpg" alt="pic" class="slide">
-                <p>we deliver anywhere in and around in Nigeria</p>
-            </div>
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <a href="#" class="header-cta">
+            Book a Free Call
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+
+        <button
+            class="close-btn"
+            id="close-btn"
+            aria-label="Close navigation"
+        >
+            &times;
+        </button>
+
+        <div class="mobile-nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+
+            <a href="#" class="mobile-cta">
+                Book a Free Call
+            </a>
         </div>
-    </section>
+
+    </nav>
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <p class="hero-eyebrow">
+                INTERIOR DESIGN &amp; FURNITURE
+            </p>
+
+            <h1>
+                Spaces that speak
+                <span>volumes</span>
+                without saying a word.
+            </h1>
+
+            <p class="hero-description">
+                We create elegant, functional, and personalized spaces
+                that reflect your lifestyle. From concept to completion,
+                we transform ordinary rooms into inspiring environments
+                you will love to live and work in.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#" class="hero-btn hero-btn-primary">
+                    Book a Free Call
+                    <span>↗</span>
+                </a>
+
+                <a href="#" class="hero-btn hero-btn-secondary">
+                    Explore More
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="hero-card-image">
+                <img
+                    src="images/kitch.jpg"
+                    alt="Modern interior kitchen"
+                >
+            </div>
+
+            <div class="hero-card-content">
+
+                <span class="hero-card-label">
+                    OUR REACH
+                </span>
+
+                <p>
+                    We deliver beautiful interiors
+                    anywhere in Nigeria.
+                </p>
+
+                <span class="hero-card-arrow">↗</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-bottom">
+
+        <span>01</span>
+
+        <div class="hero-line"></div>
+
+        <span>INTERIORS THAT INSPIRE</span>
+
+    </div>
+
+</section>
 
     <section class="socials">
         <a href="#">Google</a>
@@ -240,7 +343,8 @@
 </footer>
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
